@@ -4,9 +4,7 @@ import { Outlet } from 'react-router-dom'
 const Home = () => {
   return (
     <div>
-    
-        This is my HomePage
-      
+      This is my HomePage 
     </div>
   )
 }

@@ -14,16 +14,16 @@ function App() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to='/'>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/support">Support</NavLink>
+            <NavLink to='/about'>About</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to='/labs'>Labs</NavLink>
           </li>
           <li>
-            <NavLink to="/labs">Labs</NavLink>
+            <NavLink to='/support'>Support</NavLink>
           </li>
         </ul>
       </nav>
@@ -31,14 +31,13 @@ function App() {
 
 
       <Routes>
-        <Route path="/" element={<MainHeader/>} >
-          {/* Default Route */}
-          <Route index element={<Home/>} />
-          <Route path="/support" element={<Support/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/labs" element={<Labs/>} />
-          <Route path="*" element={<NotFound/>} />
-        </Route>
+        <Route path='/' element={<MainHeader/>}>    {/* making it parent */}
+          <Route index element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/labs' element={<Labs/>}/>
+          <Route path='/support' element={<Support/>}/>
+          <Route path='*' element={<NotFound/>}/>
+        </Route>   
       </Routes>
     </div>
   );
